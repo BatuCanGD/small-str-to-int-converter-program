@@ -27,21 +27,23 @@ int main() {
 
 		std::cout << "=> ";
 
-		if (y[0] == '-') {
+		switch (y[0]) {
+		case '-':
 			IsNegative = true;
 			i = 1;
-		}
-		else if (y[0] == '*') {
+			break;
+		case '*':
 			ToMultiply = true;
 			i = 1;
-		}
-		else if (y[0] == '/') {
+			break;
+		case '/':
 			ToDivide = true;
 			i = 1;
-		}
-		else if (y[0] == '%') {
+			break;
+		case '%':
 			ToModulate = true;
 			i = 1;
+			break;
 		}
 
 		for (; i < y.size(); i++) {
